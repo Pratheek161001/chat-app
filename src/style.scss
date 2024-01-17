@@ -200,15 +200,24 @@
                         flex-direction: column;
                         gap: 10px;
                         p{
-                            background-color: aliceblue;
+                            background-color: rgb(5, 16, 27);
                             padding: 10px 20px;
                             border-radius: 0px 10px 10px 10px;
+                            max-width: max-content;
                         }
                         img{
                             width: 50%;
-
                         }
+                    }
+                    &.owner{
+                        flex-direction: row-reverse;
 
+                        align-items: flex-end;
+                        p{
+                            background-color:#6452b4;
+                            color: aliceblue;
+                            border-radius: 10px 0px 10px 10px;
+                        }
                     }
                 }
             }
