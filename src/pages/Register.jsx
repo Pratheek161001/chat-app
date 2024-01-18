@@ -4,10 +4,12 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth,storage,db} from '../firebase'
 import {ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
  const [err,setErr]=useState(false)
  const [loading, setLoading] = useState(false);
+ const navigate=useNavigate()
 
   const submithandler= async(e)=>{
     setLoading(true);
@@ -38,7 +40,7 @@ await uploadBytesResumable(storageRef, file).then(() => {
       });
       //create empty user chats on firestore
       await setDoc(doc(db, "userChats", res.user.uid), {});
-      console.log('success')
+      navigate('/')
     } catch (err) {
       console.log(err);
       setErr(true);
