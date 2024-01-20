@@ -29,12 +29,12 @@
         gap: 10px;
         align-items: center;
         .logo{
-            color: #d5d0eb;
+            color:#5d5b8d;
             font-weight: bold;
             font-size: 24px;
         }
         .title{
-            color: #d5d0eb;
+            color:#5d5b8d;
             font-size: 12px;
         }
         form{
@@ -45,14 +45,14 @@
                 padding: 15px;
                 border: none;
                 width: 250px;
-                border-radius: 1px solid #d5d0eb;
+                border-radius: 1px solid #a7bcff;
                 &::placeholder{
                     color: rgb(175,175,175);
                 }
             }
             button{
-                background-color: #d5d0eb;
-                color: aliceblue;
+                background-color: #7b96ec;
+                color: white;
                 padding: 10px;
                 font-weight: bold;
                 border: none;
@@ -62,7 +62,7 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                color: #d5d0eb;
+                color: #8da4f1;
                 font-size: 12px;
                 cursor: pointer;
                 img{
@@ -71,14 +71,14 @@
             }
         }
         p{
-            color: #d5d0eb;
+            color: #5d5b8d;
             font-size: 12px;
             margin-top: 10px;
         }
     }
 }
 .home{
-    background-color:#d5d0eb;
+    background-color:#a7bcff;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -94,18 +94,19 @@
             width: 90%;
            }
         .sidebar{flex: 1;
-            background-color: #251a55;
+            background-color: #3e3c61;
             position: relative;
             .navbar{
                 display: flex;
                 align-items: center;
                 height: 50px;
-                background-color: #150c3f;
+                background-color: #2f2d52;
                 padding: 10px;
                 justify-content: space-between;
-                color: aliceblue;
+                color: ddddf7;
                 .logo{
                     font-weight: bold;
+                    color: aliceblue;
                     @include tablet {
                         display: none;
                       }
@@ -113,16 +114,17 @@
                 .user{
                     display: flex;
                     gap: 10px;
+                    color: aliceblue;
                     img{
-                        background-color: #d5d0eb;
+                        background-color: #ddddf7;
                         height: 24px;
                         width: 24px;
                         border-radius: 50%;
                         object-fit: cover;
                     }
                     button{
-                        background-color: #4a3a91;
-                        color: aliceblue;
+                        background-color: #5d5b8d;
+                        color: ddddf7;
                         font-size: 10px;
                         border: none;
                         cursor: pointer;
@@ -135,7 +137,7 @@
                 
             }
             .search{
-                border-bottom: 1px solid rgb(201, 211, 220);
+                border-bottom: 1px solid gray;
                 .searchform{
                     padding: 10px;
                     input{
@@ -145,7 +147,7 @@
                         outline: none;
 
                         &::placeholder{
-                            color: rgb(201, 211, 220);
+                            color: lightgray;
                         }
                     }
                 }
@@ -159,7 +161,7 @@
                 cursor: pointer;
 
                 &:hover{
-                    background-color:#150c3f;
+                    background-color:#2f2d52;
                 }
                 img{
                     width: 50px;
@@ -174,7 +176,7 @@
                     }
                     p{
                         font-size: 14px;
-                        color:  rgb(201, 211, 220);
+                        color:  lightgray;
                     }
                 }
             }
@@ -183,12 +185,12 @@
             flex: 2;
             .chatinfo{
                 height: 50px;
-                background-color:#251a55;
+                background-color:#5d5b8d;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 padding: 10px;
-                color: rgb(201, 211, 220);
+                color: lightgray;
             }
             .chatIcons{
                 display: flex;
@@ -199,7 +201,7 @@
                 }
             }
             .messages{
-                background-color: #d5d0eb;
+                background-color: #ddddf7;
                 padding: 10px;
                 height: calc(100% - 160px);
                 overflow: scroll;
@@ -211,7 +213,7 @@
                     .messageinfo{
                         display: flex;
                         flex-direction: column;
-                        color:#150c3f;
+                        color:gray;
                         font-weight: 300;
                         img{
                             width: 40px;
@@ -226,7 +228,7 @@
                         flex-direction: column;
                         gap: 10px;
                         p{
-                            background-color: rgb(5, 16, 27);
+                            background-color: white;
                             padding: 10px 20px;
                             border-radius: 0px 10px 10px 10px;
                             max-width: max-content;
@@ -239,10 +241,8 @@
                         flex-direction: row-reverse;
                         .messageContent {
                             align-items: flex-end;
-
-                        align-items: flex-end;
                         p{
-                            background-color:#6452b4;
+                            background-color:#8da4f1;
                             color: aliceblue;
                             border-radius: 10px 0px 10px 10px;
                         }
@@ -261,10 +261,10 @@
                     width: 100%;
                     border: none;
                     outline: none;
-                    font-style: 18px;
-                    color:#150c3f;
+                    font-size: 18px;
+                    color:#2f2d52;
                     &::placeholder{
-                        color:rgb(201, 211, 220);
+                        color:lightgray;
                     }
                 }
                 .send{
@@ -279,7 +279,7 @@
                         border: none;
                         padding: 10px 15px;
                         color: aliceblue;
-                        background-color: #6452b4;
+                        background-color: #8da4f1;
                         cursor: pointer;
                     }
                 }
