@@ -67,7 +67,7 @@ const Search =  () => {
   return (
     <div className='search'>
       <div className="searchform">
-        <input type='text' placeholder='Find a user' onKeyDown={handleKey} onChange={e=>setusername(e.target.value)} value={username}/>
+        <input type='text' placeholder='Find a user' onKeyDown={handleKey} onChange={e=>setusername(e.target.value)} value={username }/>
       </div>
       {err && <span>something wnet wrong</span> }
       {user &&(<div className="userchat" onClick={handleSelect}>
