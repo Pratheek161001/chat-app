@@ -13,10 +13,12 @@ const Messages = () => {
       doc.exists() && setmessages(doc.data().messages)
     })
     return()=>{
-      unsub()
-    }
+      unsub();
+    };
 
-  },[data.chatId])
+  },[data.chatId]);
+
+  console.log(messages)
 
   return (
     <div className='messages'>

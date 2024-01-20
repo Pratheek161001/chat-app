@@ -4,14 +4,11 @@ import { useNavigate,Link } from 'react-router-dom';
 import {signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase';
 
-
 const Login = () => {
   const [err,setErr]=useState(false)
- const [loading, setLoading] = useState(false);
  const navigate=useNavigate()
 
   const submithandler= async(e)=>{
-    setLoading(true);
     e.preventDefault()
     const email=e.target[0].value;
     const password=e.target[1].value;
@@ -20,7 +17,6 @@ const Login = () => {
       navigate('/')
 } catch (err) {
 setErr(true);
-setLoading(false);
 }
 };
   return (
@@ -31,8 +27,8 @@ setLoading(false);
         <form onSubmit={submithandler}>
           <input type='email' placeholder='email'/>
           <input type='password' placeholder='password'/>
-         
           <button>Log in</button>
+          {err && <span>Something went wrong</span>}
         </form>
         <p>you don't have account ? <Link to='/register'>Sign in</Link></p>
       </div>

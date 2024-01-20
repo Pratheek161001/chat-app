@@ -36,10 +36,8 @@ const Search =  () => {
     try{
       const res=await getDoc(doc(db,'chats',combinedId));
       if (!res.exists()) {
-        //create a chat in chats collection
         await setDoc(doc(db, "chats", combinedId), { messages: [] });
 
-        //create user chats
         await updateDoc(doc(db, "userChats", currentUser.uid), {
           [combinedId + ".userInfo"]: {
             uid: user.uid,
@@ -71,7 +69,7 @@ const Search =  () => {
       </div>
       {err && <span>something wnet wrong</span> }
       {user &&(<div className="userchat" onClick={handleSelect}>
-        <img src={user.photoURL}></img>
+        <img src={user.photoURL} alt=''></img>
         <div className="userinfo">
           <span>{user.displayName}</span>
         </div>

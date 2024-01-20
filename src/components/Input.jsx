@@ -74,7 +74,7 @@ const Input = () => {
 
   return (
     <div className='input'>
-      <input type='text' placeholder='type something...' onChange={e=>settext(e.target.value)}/>
+      <input type='text' placeholder='type something...' onChange={e=>settext(e.target.value)} value={text}/>
       <div className='send'>
         <img src={Attach} alt=''/>
         <input type='file' style={{display:'none'}} id='file' onChange={e=>setimg(e.target.files[0])}/>

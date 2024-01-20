@@ -21,7 +21,7 @@ const Register = () => {
     try{
       const res =await createUserWithEmailAndPassword(auth, email, password)
       const date = new Date().getTime();
-const storageRef = ref(storage, `${displayName + date}`);
+      const storageRef = ref(storage, `${displayName + date}`);
 
 await uploadBytesResumable(storageRef, file).then(() => {
   getDownloadURL(storageRef).then(async (downloadURL) => {
@@ -62,12 +62,13 @@ setLoading(false);
           <input type='text' placeholder='display name'/>
           <input type='email' placeholder='email'/>
           <input type='password' placeholder='password'/>
-          <input type='file' id='file' style={{display:'none'}}/>
+          <input type='file' id='file' style={{display:'none'}} required/>
           <label htmlFor="file">
             <img src={Add} alt=''/>
             <span>Add an avatar</span>
           </label>
           <button disabled={loading}>Sign up</button>
+          {loading && "Uploading and compressing the image please wait..."}
           {err && <span>something went wrong</span>}
         </form>
         <p>you do have account ? <Link to='/login'>Login</Link></p>
