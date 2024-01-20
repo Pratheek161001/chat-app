@@ -13,14 +13,19 @@ const Message = ({message}) => {
 
   console.log(message)
   return (
-    <div className='message owner'>
+    <div  ref={ref} className={`message ${message.senderId === currentUser.uid && "owner"}`}>
       <div className="messageinfo">
-        <img src='https://tse4.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gAAAA&pid=Api&P=0&h=180' alt='' />
+        <img src={
+            message.senderId === currentUser.uid
+              ? currentUser.photoURL
+              : data.user.photoURL
+          }
+          alt="" />
         <span>just now</span>
       </div>
       <div className="messageContent">
-        <p>hello</p>
-        <img src='https://tse4.mm.bing.net/th?id=OIP.NqY3rNMnx2NXYo3KJfg43gAAAA&pid=Api&P=0&h=180' alt=''/>
+        <p>{message.text}</p>
+        {message.img && <img src={message.img} alt="" />}
       </div>
     </div>
   )
